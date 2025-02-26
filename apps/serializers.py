@@ -16,7 +16,6 @@ class RegisterModelSerializer(ModelSerializer):
 
     def create(self, validated_data):
         user = User(
-            username=validated_data["email"],
             email=validated_data["email"],
             first_name=validated_data.get("fullname", "")
         )
